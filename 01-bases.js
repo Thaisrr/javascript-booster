@@ -169,3 +169,18 @@ maVariable &&= 'nouvelle valeur';
 console.log(age2); // 20
 
 console.log(!!age2); // true
+
+
+const str = "hello";
+const str2 = '';
+const str3 = `1 + 1 = ${1 + 1}`; // (alt-gr + 7) x 2
+
+
+// Méthodes de String :
+
+let str4 = "   heLlO World !  ";
+str4 = str4.trim(); // enleve les espaces en début et fin de string
+str4 = str4.toLowerCase(); // retourne la chaîne en minuscule
+console.log(str4.includes('world')); // true
+console.log(str4.endsWith('!')); // true
+const strToArray = str4.split(' '); // ['hello', 'world', '!']
