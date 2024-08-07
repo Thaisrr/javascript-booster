@@ -35,5 +35,5 @@ Ecrire une fonction qui retourne le plus grand nombre d'une liste sans utiliser 
 
 ## Exo 5
 
-Ecrire une fonction qui prend en paramétre un tableau et qui retourne le tableau triè par ordre croissant
+Ecrire une fonction qui prend en paramétre un tableau et qui retourne le tableau trié par ordre croissant
 sans utiliser sort()
