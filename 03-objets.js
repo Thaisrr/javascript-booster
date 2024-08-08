@@ -135,7 +135,7 @@ class Tasse {
     }
 
     valueThis3 = () => {
-        console.log(this);
+        console.log(this); // correspond à l'objet Window
     }
 
 }
@@ -162,3 +162,4 @@ const obj = {
 console.log('----------------');
 obj.value1();
 obj.value3();
+
