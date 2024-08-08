@@ -64,6 +64,21 @@ Permet d'attribuer une valeur à une variable en fonction d'une condition.
 
 ## Les Arrays
 
-Un tableau est une liste de données ( souvent) de même type.
+Un tableau est une liste de données (souvent) de même type.
 
 https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+## Les objets
+
+- chaise, ordinateur, 
+- ordinateur : composants, couleur, écran, periphériques, carte graphique
+
+-> En développement, un objet est une collection de propriétés qui va définir un élément.
+
+```javascript
+const ordinateur = {
+    couleur: 'gris',
+    ecran: 'lg machin chose',
+    périphériques: ['souris-usb', 'imprimante'],
+}
+```
