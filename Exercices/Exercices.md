@@ -40,6 +40,7 @@ sans utiliser sort()
 
 ## Exo 6
 
-Refaire le jeu des alumettes ( de fort boyard ). Il y a 21 batons sur la table.
-Chaque joueur peut prendre 1, 2 ou 3 baton.
+Refaire le jeu des allumettes ( de fort boyard ). Il y a 21 batons sur la table.
+Le jeu se joue à 2 joueurs.
+Chaque joueur peut prendre, à son tour, 1, 2 ou 3 baton.
 Le joueur qui prend le dernier baton à perdu.
