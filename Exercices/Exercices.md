@@ -37,3 +37,9 @@ Ecrire une fonction qui retourne le plus grand nombre d'une liste sans utiliser 
 
 Ecrire une fonction qui prend en paramétre un tableau et qui retourne le tableau trié par ordre croissant
 sans utiliser sort()
+
+## Exo 6
+
+Refaire le jeu des alumettes ( de fort boyard ). Il y a 21 batons sur la table.
+Chaque joueur peut prendre 1, 2 ou 3 baton.
+Le joueur qui prend le dernier baton à perdu.
