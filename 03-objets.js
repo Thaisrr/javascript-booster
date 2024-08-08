@@ -120,22 +120,10 @@ class Tasse {
 
     vider2 = function() { this.contenuReel = 0}
 
-    vider3 = () => this.contenuReel = 0; // NON
+    vider3 = () => this.contenuReel = 0;
 
     tchin(autreTasse) {
         console.log(`Je tchine la tasse ${this.color} contre la tasse ${autreTasse.color}`);
-    }
-
-    valueThis() {
-        console.log(this); // Correspond à l'objet sur lequel on est
-    }
-
-    valueThis2 = function () {
-        console.log(this);
-    }
-
-    valueThis3 = () => {
-        console.log(this); // correspond à l'objet Window
     }
 
 }
@@ -149,10 +137,6 @@ t.vider();
 console.log(t.contenuReel); // 0
 t.tchin(t2);
 
-t.valueThis();
-t.valueThis2();
-t.valueThis3();
-
 const obj = {
     name: 'toto',
     value1() {console.log(this.name)},
@@ -162,4 +146,48 @@ const obj = {
 console.log('----------------');
 obj.value1();
 obj.value3();
+
+
+/***** Héritage *****/
+
+/*
+Employé : nom, prenom, email, job
+Client : nom, prenom, email, entreprise
+ */
+
+class User {
+    nom;
+    prenom;
+    email;
+
+    constructor(nom, prenom, email) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+    }
+}
+
+class Employe extends User {
+    job;
+
+    constructor(nom, prenom, job) {
+        let email_created = `${nom}.${prenom}@montrentreprise.com`;
+        super(nom, prenom, email_created); // constructeur du parent ( User )
+        this.job = job;
+    }
+}
+
+class Client extends User {
+    entreprise;
+
+    constructor(nom, prenom, email, entreprise) {
+        super(nom, prenom, email);
+        this.entreprise = entreprise;
+    }
+}
+
+const employe1 = new Employe('La Tourte', 'Michou', 'développeur');
+console.log(employe1);
+
+
 

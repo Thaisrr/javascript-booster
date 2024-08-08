@@ -20,7 +20,8 @@ armure
 
 - Créer une méthode présenter qui présente le personnage et ses statistiques
 
-- Créer une methode ( fonction de classe ) attaquer, qui prend en paramétre un autre personnage B et qui lui inflige des dégats
+- Créer une methode ( fonction de classe ) attaquer, qui prend en paramétre un autre personnage B
+ et qui lui inflige des dégats
  -> dégats arme du personnage A - resistance de l'armure du personnage B
         -> Arme de 10 dégat, armure de 5 -> 5pv en moins
  -> Retirer les points de vie du personnage B
@@ -63,7 +64,63 @@ class Personnage {
         this.xp = 0;
         this.pv = 100;
     }
+
+    sePresenter() {
+        console.log(`Nom du personnage : ${this.nom} 
+            LVL : ${this.lvl},
+            XP : ${this.xp}
+            PV: ${this.xp}
+            Arme : ${this.arme.nom} de ${this.arme.degats} dégats,
+            Armure: ${this.armure.nom} de ${this.armure.resistances} résistance
+        `);
+    }
+
+    attaquer(ennemi) {
+        const degats = this.arme.degats - ennemi.armure.resistances;
+        ennemi.pv = ennemi.pv - degats;
+        if(ennemi.pv <= 0) {
+            console.log(`Votre ennemi ${ennemi.nom} est mort !`);
+        } else {
+            console.log(`${ennemi.nom} a perdu ${degats}xp !`);
+        }
+    }
+
 }
 
+
+
 const perso = new Personnage('Mithrandir');
-perso.arme = new Arme('Epée rouillée', 12);
+perso.sePresenter();
+
+const perso2 = new Personnage('Balrog');
+perso2.sePresenter();
+
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+perso.attaquer(perso2);
+
+perso2.attaquer(perso);
