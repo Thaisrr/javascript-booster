@@ -82,3 +82,38 @@ const ordinateur = {
     périphériques: ['souris-usb', 'imprimante'],
 }
 ```
+
+## Les classes
+
+Un ensemble de propriétés et de méthodes qui permettent de créer des objets.
+Une classe à une constructeur, qui permet de définir des valeurs à la création d'un objet.
+
+```javascript
+const object = new MaClasse('valeur1', 'valeur2'); // On appelle le constructeur de la classe
+```
+
+Une méthode, c'est une fonction propre à une classe.
+
+Une classe peut hériter d'une autre classe avec le mot clef `extends`.
+Elle hérite de toutes les propriétés et toutes les méthodes de la classe parente,
+Elle peut ajouter ses propres propriétés et méthodes.
+
+Dans le constructeur d'une classe enfant, il faut appeler le constructeur du parent avec le mot clef `super()`;
+
+On peut rendre une propriété privée en la préfixant d'un `#` : 
+Elle ne sera alors plus accessible en dehors de la classe.
+
+Pour accéder aux propriétés privées, ou à des valeurs calculées, on peut utiliser les getters : 
+
+```javascript
+get maPropriete() {
+    return this.propriete;
+}
+```
+
+Pour modifier une propriété privée, ou modifié en appliquant des calcules ou autre, on peut utiliser les setters : 
+```javascript
+set maPropriete(nouvelle_valeur) {
+    this.propriete = nouvelle_valeur;
+}
+```

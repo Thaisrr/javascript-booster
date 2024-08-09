@@ -191,3 +191,69 @@ console.log(employe1);
 
 
 
+/***** Les getters setters ****** */
+
+class User2 {
+    #id;
+    nom;
+    prenom;
+    #email;
+    #password;
+
+    constructor(nom, prenom) {
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+
+    get id() {
+        return this.#id;
+    }
+
+    get email() {
+        return this.#email;
+    }
+
+    set email(new_email) {
+        // instructions
+        this.#email = new_email;
+    }
+
+    get password() {
+        return this.#password;
+    }
+
+    set password(new_password) {
+        // avant, je hash new_password;
+        const hashed = `${new_password} hashé`;
+        this.#password = hashed;
+    }
+
+    get nomComplet() {
+        return `${u.nom} ${u.prenom}`;
+    }
+
+}
+
+const u = new User2('Jean Micheline', 'prenom');
+// u.#email = 'un super email';
+u.password = 'password'; // on utilise un setter comme une propriété
+console.log(u.password); // on ne met pas de parenthéses sur un getter
+
+console.log(u.nomComplet);
+console.log(u.nom);
+
+/*
+Créer la classe Article
+- nom
+- prix
+Créer une classe panier :
+- une liste d'articles
+- total
+- une méthode ( PAS un setter ) qui permet d'ajouter un article
+- total doit être privé, il est calculé ( dans un setter ) en prenant la somme des prix des articles.
+- Quand on ajoute un article, on recalcule le total.
+
+=> Créer quelques articles.
+=> Les ajouter au panier
+=> Afficher le total
+ */
