@@ -264,3 +264,86 @@ console.log(panier.total) doit afficher 0
 
  */
 
+class Animal {
+
+}
+
+/*** static ***/
+
+class Felin extends Animal {
+    nom;
+    static nbFelins = 0;
+
+    constructor(nom) {
+        super();
+        this.nom = nom;
+        Felin.nbFelins++;
+    }
+
+    parler() {
+        console.log('Miaou');
+    }
+}
+
+const f1 = new Felin('Tigre')
+const f2 = new Felin('Chat')
+const f3 = new Felin('Lion')
+console.log(`J'ai instancié ${Felin.nbFelins} félins`);
+
+class Math {
+    static PI = 3.14;
+
+    static sum(a, b) {
+        return a + b;
+    }
+}
+
+console.log(Math.PI);
+console.log(Math.sum(156, 456));
+
+const PI = 3.14;
+function sum(a, b)  {
+    return a + b;
+}
+
+class ArticleService {
+    static getArticle() {
+        console.log('demande 1 article à l\'api');
+    }
+
+    static getArticles() {
+        console.log('demande tous les articles à l\'api')
+    }
+}
+
+/***** Override ****/
+
+class Chat extends Felin {
+    ronronner() {
+        console.log('ron ron')
+    }
+}
+
+const cat = new Chat('Cactus');
+cat.parler();
+
+
+class Tigre extends Felin {
+    parler() {
+        console.log('Grrrrr');
+    }
+}
+
+const tiger = new Tigre('Baltazar');
+tiger.parler();
+
+/****** instance of *******/
+
+const isCat = cat instanceof Chat;
+console.log(isCat); // true
+
+console.log( tiger instanceof Tigre); // true
+console.log(cat instanceof Tigre); // false
+console.log(cat instanceof Felin); // True car chat hérite de félin
+console.log(tiger instanceof Felin); // true
+console.log(cat instanceof Animal); // true

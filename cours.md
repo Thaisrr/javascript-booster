@@ -118,3 +118,22 @@ set maPropriete(nouvelle_valeur) {
     this.propriete = nouvelle_valeur;
 }
 ```
+
+=> On parle d'instancier un objet quand on le créé avec le `new`
+Une instance d'une classe est un objet d'une classe.
+
+
+Une propriété static ou une méthode static, c'est une propriété qui est affiliée non pas à une instance d'un objet
+mais à une classe.
+
+C'est à dire que je n'ai pas besoin d'instancier, de créer un objet pour me servir de la méthode, ou de la propriété.
+
+On s'en sert beaucoup dans les classes utilitaires.
+
+Pour s'en servir, on utilise le nom de classe point la propriété
+```javascript
+MaClasse.proprieteStatique;
+```
+
+`instance of` est un mot clef qui permet de retourner un boolean.
+Il va tester un objet, et vérifier si cet objet est un instance d'une classe donnée.
