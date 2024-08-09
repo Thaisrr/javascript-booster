@@ -104,7 +104,7 @@ On peut rendre une propriété privée en la préfixant d'un `#` :
 Elle ne sera alors plus accessible en dehors de la classe.
 
 Pour accéder aux propriétés privées, ou à des valeurs calculées, on peut utiliser les getters : 
-
+Un getter ne prend jamais de paramétre.
 ```javascript
 get maPropriete() {
     return this.propriete;
@@ -112,6 +112,7 @@ get maPropriete() {
 ```
 
 Pour modifier une propriété privée, ou modifié en appliquant des calcules ou autre, on peut utiliser les setters : 
+Un setter à toujours besoin d'un paramètre.
 ```javascript
 set maPropriete(nouvelle_valeur) {
     this.propriete = nouvelle_valeur;

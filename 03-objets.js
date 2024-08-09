@@ -247,13 +247,20 @@ Créer la classe Article
 - nom
 - prix
 Créer une classe panier :
-- une liste d'articles
-- total
+- articles - une liste d'articles en privée, par défaut un tableau vide
+    - ne peut pas être modifiée
+    - elle peut être lue
 - une méthode ( PAS un setter ) qui permet d'ajouter un article
-- total doit être privé, il est calculé ( dans un setter ) en prenant la somme des prix des articles.
-- Quand on ajoute un article, on recalcule le total.
+- total, une valeur  calculée en prenant la somme des prix des articles (getter)
 
 => Créer quelques articles.
 => Les ajouter au panier
 => Afficher le total
+
+const panier = new Panier();
+console.log(panier.articles) doit afficher : []
+console.log(panier.total) doit afficher 0
+
+
  */
+
