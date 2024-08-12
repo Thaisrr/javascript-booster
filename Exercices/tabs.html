@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .tab-content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #007BFF;
+            margin-top: -1px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tab-header {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #007BFF;
+            cursor: pointer;
+            margin-right: -1px;
+        }
+        .tab-header.active {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+    <script src="tabs.js" defer></script>
+</head>
+<body>
+<div class="tab-header active" data-tab="1">Onglet 1</div>
+<div class="tab-header" data-tab="2">Onglet 2</div>
+<div class="tab-header" data-tab="3">Onglet 3</div>
+
+<div id="tab1" class="tab-content active">Contenu de l'onglet 1.</div>
+<div id="tab2" class="tab-content">Contenu de l'onglet 2.</div>
+<div id="tab3" class="tab-content">Contenu de l'onglet 3.</div>
+</body>
+</html>
