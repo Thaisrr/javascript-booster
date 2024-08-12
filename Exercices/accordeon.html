@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accordéon</title>
+    <style>
+        .accordeon-section {
+            margin-bottom: 10px;
+        }
+        .accordeon-header {
+            background: blue;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+        .accordeon-content {
+            padding: 10px;
+            border: solid blue 1px;
+            margin-top: 0;
+            display: none;
+        }
+    </style>
+    <script src="accordeon.js" defer></script>
+</head>
+<body>
+<h1>Accordeon</h1>
+<div class="accordeon-section">
+    <h2 class="accordeon-header">Section 1</h2>
+    <p class="accordeon-content">Contenu de la section 1</p>
+</div>
+<div class="accordeon-section">
+    <h2 class="accordeon-header">Section 2</h2>
+    <p class="accordeon-content">Contenu de la section 2</p>
+</div>
+<div class="accordeon-section">
+    <h2 class="accordeon-header">Section 3</h2>
+    <p class="accordeon-content">Contenu de la section 3</p>
+</div>
+</body>
+</html>
