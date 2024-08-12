@@ -136,5 +136,6 @@ console.log(sessionStorage.getItem('preference'));
 sessionStorage.removeItem('preference');
 sessionStorage.clear();
 
-
-
+const p2 = document.querySelector('#p2');
+const frereSuivant = p2.nextElementSibling;
+// Element HTML frère suivant
