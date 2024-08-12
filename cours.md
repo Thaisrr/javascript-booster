@@ -137,3 +137,14 @@ MaClasse.proprieteStatique;
 
 `instance of` est un mot clef qui permet de retourner un boolean.
 Il va tester un objet, et vérifier si cet objet est un instance d'une classe donnée.
+
+## Le DOM
+
+- Permet de manipuler le HTML en Javascript
+- Document Object Model : une representation structurée du document, sous forme d'arbre.
+- Le document est un objet, qui a ses attributs, et ses méthodes.
+
+```javascript
+document.methode()
+```
+

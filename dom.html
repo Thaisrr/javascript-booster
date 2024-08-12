@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Le DOM</title>
+    <style>
+        .classC {
+            border: solid;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="title" class="classA">Coucou, <span style="display: none">je suis un titre !</span></h1>
+
+<div>
+    <p class="paragraphe">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur debitis earum esse eum facere impedit inventore ipsa iste, iure libero mollitia nobis quae, qui quos rem similique tenetur voluptate!</p>
+    <p class="paragraphe" id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur debitis earum esse eum facere impedit inventore ipsa iste, iure libero mollitia nobis quae, qui quos rem similique tenetur voluptate!</p>
+    <p class="paragraphe">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur debitis earum esse eum facere impedit inventore ipsa iste, iure libero mollitia nobis quae, qui quos rem similique tenetur voluptate!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores, eius enim harum magnam nisi quam sit. Distinctio doloremque in labore, minus, necessitatibus nemo sequi sit soluta tenetur voluptas, voluptatem!</p>
+</div>
+
+<button onclick="addClass()">Ajouter / Supprimer la classe</button>
+
+<!-- Quand on manipule le DOM, on met le script à la fin du body -->
+<script src="04-dom.js"></script>
+
+</body>
+</html>
