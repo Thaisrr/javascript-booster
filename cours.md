@@ -148,3 +148,52 @@ Il va tester un objet, et vérifier si cet objet est un instance d'une classe do
 document.methode()
 ```
 
+### Accéder à un élément
+
+Un seul élément : 
+```javascript
+document.querySelector('selecteur css')
+```
+
+Plusieurs éléments : 
+```javascript
+document.querySelectorAll('selecteur css')
+```
+
+### Créer un élément : 
+
+```javascript
+const monElement = document.createElement('balise à créer');
+```
+
+L'élément créé peut ensuite recevoir du texte, ou des attributs html (`text-content`, `style`, `classList`);
+```javascript
+monElement.textContent = 'Mon Contenu';
+monElement.classList.add('maClasse')
+```
+
+Il faut ensuite ajouter l'élément dans le dom. Pour ça, on part du parent.
+Pour intégrer l'élément à la fin du parent, en dernier enfant, on utilise `append` ou `appendChild`
+```javascript
+parent.appendChild(monElement)
+```
+
+## Les événements
+
+Il existe plusieurs types d'événements : 
+- click
+- scroll
+- mouseover
+- mouseleave
+- mouseenter
+- focus
+- blur
+- submit
+- keyup
+- keydown
+- keypress
+- ...
+
+Pour accéder à ces événements, on a 2 solutions: 
+- Soit depuis le HTML, `on` + le nom de l'événement sur une balise, pui son appelle la fonction associée
+- Soit depuis le Javascript, on utilise un écouteur d'événement, et on lui passe une fonction à éxécutée (une callback)

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Les événements</title>
+    <script src="05-events.js"></script>
+    <style>
+        body {
+            min-height: 200vh;
+        }
+        p {
+            background: red;
+        }
+    </style>
+
+</head>
+<body>
+
+<p><button onclick="handleClick()">Ne cliquez pas ici !</button> </p>
+
+
+<p onclick="alert('coucou')">
+    <button id="btn">Cliquez ici plutôt !</button>
+</p>
+
+
+<form onsubmit="handleSubmit()" action="">
+    <input name="nom"/>
+    <button type="submit">Envoyer</button>
+</form>
+
+</body>
+</html>
