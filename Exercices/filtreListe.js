@@ -29,5 +29,4 @@ form.addEventListener('submit', function (e) {
     })*/
     ul.innerHTML = '';
     displayListe(filtered);
-
 })

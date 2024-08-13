@@ -73,3 +73,13 @@ Quand on valide le formulaire, filtrer la liste pour n'afficher que
 les éléments qui contienne la chaîne de caractère
  passée en input
  */
+
+/*
+- Créer une liste vide en JS
+- En HTML, créer un formulaire avec un input
+- A la validation du formulaire, ajouter la valeur de l'input dans la liste
+- Afficher la liste OU le nouvel élément
+- Ajouter un bouton pour supprimer l'élément de la liste
+- Ajouter un bouton pour valider un élément de la liste ( le barrer )
+( en ajoutant une classe par exemple, ou un style )
+ */
