@@ -169,13 +169,21 @@ const monElement = document.createElement('balise à créer');
 L'élément créé peut ensuite recevoir du texte, ou des attributs html (`text-content`, `style`, `classList`);
 ```javascript
 monElement.textContent = 'Mon Contenu';
-monElement.classList.add('maClasse')
+monElement.classList.add('maClasse');
+monElement.id = "unID";
 ```
 
 Il faut ensuite ajouter l'élément dans le dom. Pour ça, on part du parent.
 Pour intégrer l'élément à la fin du parent, en dernier enfant, on utilise `append` ou `appendChild`
 ```javascript
-parent.appendChild(monElement)
+parent.appendChild(monElement);
+parent.prepend(monElement);
+```
+
+On peut également partir des frères avec : 
+```javascript
+frere.before(monElement);
+frere.after(monElement);
 ```
 
 ## Les événements
@@ -197,3 +205,31 @@ Il existe plusieurs types d'événements :
 Pour accéder à ces événements, on a 2 solutions: 
 - Soit depuis le HTML, `on` + le nom de l'événement sur une balise, pui son appelle la fonction associée
 - Soit depuis le Javascript, on utilise un écouteur d'événement, et on lui passe une fonction à éxécutée (une callback)
+
+```html
+<button onclick="maFonction()">
+```
+
+```javascript
+const btn = document.querySelector('button');
+btn.addEventListener('click', function (event) {
+    // mon code de fonction
+});
+```
+
+## Dataset
+
+Pour ajouter des informations depuis le HTML
+```html
+<div id='div' data-lang="fr">Bla bla</div>
+```
+
+On utilise le mot clef `data-` + un nom choisi ( en kebab case )
+
+On peut s'en servir comme selecteur dans le CSS.
+
+On peut aussi y accéder dans le Javascript : 
+```javascript
+const div = document.querySelector('#div');
+const langue = div.dataset.lang; // contient "fr"
+```
