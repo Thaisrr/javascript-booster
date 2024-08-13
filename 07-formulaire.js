@@ -65,4 +65,11 @@ Bonus: au bout de 3 tentatives ratées, le compte est bloqué
 -> le message secret ne s'affiche plus jamais.
  */
 
-
+/*
+Créer une liste en javascript
+Afficher dans le HTML tous les éléments de la liste grâce à javascript
+Créer un formulaire avec un input et un bouton dans le HTML.
+Quand on valide le formulaire, filtrer la liste pour n'afficher que
+les éléments qui contienne la chaîne de caractère
+ passée en input
+ */
