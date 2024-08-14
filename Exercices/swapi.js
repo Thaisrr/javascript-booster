@@ -1,5 +1,10 @@
-async function getCharacters() {
-    const response = await axios.get('https://swapi.dev/api/people');
+async function getCharacters(pageNumber) {
+
+    const response = await axios.get('https://swapi.dev/api/people', {
+        params: {
+            page: pageNumber
+        }
+    });
     const characters = response.data.results;
     console.table(characters);
 
@@ -27,4 +32,10 @@ async function getCharacters() {
 
 }
 
-getCharacters();
+let pageNumber = 1;
+getCharacters(pageNumber);
+
+function nextPage() {
+    pageNumber++;
+    getCharacters(pageNumber);
+}
