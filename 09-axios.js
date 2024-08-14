@@ -45,7 +45,23 @@ async function getTodosFiltered() {
 }
 getTodosFiltered();
 
-/*
-Créer une fonction qui permet de récupérer les posts d'un user dont l'id est passé en paramétre de la fonction.
-Faire un console.table des posts récupérés.
+/**
+ * Récupérer un utilisateur, afficher son nom dans la console
+ * Puis afficher ses todos dans la console.
  */
+
+
+async function getUserAndTodos(id) {
+    const userResponse = await axios.get('https://jsonplaceholder.typicode.com/users/' + id);
+    const user = userResponse.data;
+    console.log("------Taches de ", user.name);
+    const todosResponses = await axios.get('https://jsonplaceholder.typicode.com/todos', {
+        params: {
+            userId: id,
+        }
+    });
+    console.table(todosResponses.data)
+}
+
+getUserAndTodos(1);
+getUserAndTodos(9);
